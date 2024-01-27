@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>A Great Music Platform By Vishal</h1>
+    
+<!-- ... your existing HTML code ... -->
+
+    <form method="post" action="/play">
+        <input type="text" name="search_query" placeholder="Search any song" id="search_query" required>
+        <button type="submit">Search</button>
+    </form>
+
+  
+
+    {% if videos %}
+        <ul>
+            {% for video in videos %}
+                <li>
+                    <img src="{{ video['thumbnail_url'] }}" alt="Thumbnail"><br>
+                    <strong>Title:</strong> {{ video['title'] }}<br>
+                    <strong>Play URL:</strong> <a href="{{ video['play_url'] }}" target="_blank">{{ video['play_url'] }}</a><br>
+                    {% if video['download_url'] %}
+                        <strong>Download URL (MP3):</strong>
+                        <audio controls>
+                            <source src="{{ video['download_url'] }}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    {% else %}
+                        <strong>Download URL (MP3):</strong> Error downloading MP3 audio<br>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items found in the search results.</p>
+    {% endif %}
+</body>
+</html>

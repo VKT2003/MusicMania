@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(51,50,54);
+    background: linear-gradient(90deg, rgba(51,50,54,1) 24%, rgba(75,75,85,1) 48%, rgba(39,39,61,1) 80%, rgba(36,47,49,1) 94%);
+}
+
+form{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: #2c2c2c;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, rgba(71,71,74,1) 0%, rgba(84,79,97,1) 17%, rgba(163,103,115,1) 40%, rgba(144,232,159,1) 58%, rgba(232,144,162,1) 76%, rgba(181,139,148,1) 89%);
+    -webkit-background-clip: text; /* For webkit browsers (Chrome, Safari) */
+    color: transparent; /* Set text color to transparent to reveal the gradient background */
+    margin: 20px 0;
+}
+#search_query {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    border: 2px solid transparent; /* Set a transparent solid border */
+    border-image: linear-gradient(95deg, #ff8a00, #e52e71, #a64dff, #00bfff);
+    border-image-slice: 1;
+    border-radius: 20px; /* Set border-radius for the actual border */
+    font-size: 1.2rem;
+    background: #2c2c2c;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box; /* Clip the background to the padding box, not the border box */
+
+    /* Additional Style Enhancements (Feel free to customize) */
+    transition: border 0.3s ease; /* Add a smooth transition for the border */
+}
+
+/* Additional Style Enhancements (Feel free to customize) */
+#search_query:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+    border: 2px solid #ff8a00; /* Change border color on focus */
+}
+
+
+form button {
+    width: 100%;
+    padding: 12px; /* Slightly increased padding for better visual appeal */
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background: #2c2c2c;
+    color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-color:linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(119,87,208,1) 24%, rgba(252,70,107,1) 94%) ;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+form button:hover {
+    background: #3d3d3d; /* Change background color on hover */
+}
+
+form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+}
+
+/* Add more styling as needed */
+/* Style for the video list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for each video item */
+li {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #a64dff, #00bfff);
+    color: white;
+}
+
+/* Style for the thumbnail images */
+li img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center the image within the li */
+    width: 300px;
+    height:300px;
+    height: auto;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff8a00, #e52e71, #a64dff, #00bfff);
+    color: white;
+}
+
+/* Style for the video details */
+li strong {
+    display: block;
+    margin-top: 10px;
+    background: linear-gradient(to right, #ff8a00, #e52e71, #a64dff, #00bfff);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Style for the audio player */
+audio {
+    width: 100%;
+    margin-top: 10px;
+    background: linear-gradient(to right, #ff8a00, #e52e71, #a64dff, #00bfff);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Style for the download URL link */
+li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Style for the download URL link on hover */
+li a:hover {
+    text-decoration: underline;
+}
